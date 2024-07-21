@@ -2,12 +2,17 @@ package dev.gisela;
 
 
 public class MesesDias {
+
+
     public static void main(String[] args) {
-        int mes = 5; // Puedes cambiar este número para probar con otros meses
-        
+        int mes = 5; 
+        System.out.println(obtenerMensaje(mes));
+    }
+    
+    public static String obtenerMensaje(int mes) {
         String nombreDelMes;
         int diasDelMes;
-        
+
         switch (mes) {
             case 1:
                 nombreDelMes = "Enero";
@@ -15,7 +20,7 @@ public class MesesDias {
                 break;
             case 2:
                 nombreDelMes = "Febrero";
-                diasDelMes = 28; // Consideramos año no bisiesto por simplicidad
+                diasDelMes = 28; 
                 break;
             case 3:
                 nombreDelMes = "Marzo";
@@ -62,11 +67,12 @@ public class MesesDias {
                 diasDelMes = 0;
                 break;
         }
-        
+
         if (diasDelMes > 0) {
-            System.out.println("El mes de " + nombreDelMes + " tiene " + diasDelMes + " días.");
+            return "El mes de " + nombreDelMes + " tiene " + diasDelMes + " días.";
         } else {
-            System.out.println(nombreDelMes);
+            return nombreDelMes;
         }
     }
+
 }
